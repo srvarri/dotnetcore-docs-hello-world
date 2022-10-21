@@ -20,7 +20,7 @@ pipeline {
         }  
         stages('dotnet Archive artifacts') { 
            steps {
-             sh './build.sh linux-bin/foo.dll'
+             sh 'publish/foo.dll'
            }   
         }    
     }
