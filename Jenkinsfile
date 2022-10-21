@@ -18,9 +18,9 @@ pipeline {
                sh 'dotnet publish dotnetcoresample.csproj'
            }
         }  
-        stages('dotnet artifactroy') { 
+        stages('dotnet Archive artifacts') { 
            steps {
-             sh '**/publish/*.dll'
+             sh './build.sh linux-bin/foo.dll'
            }   
         }    
     }
