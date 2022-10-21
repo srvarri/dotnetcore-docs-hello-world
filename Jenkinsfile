@@ -18,9 +18,10 @@ pipeline {
                sh 'dotnet publish dotnetcoresample.csproj'
            }
         }  
-        stages('dotnet artifactroy') 
+        stages('dotnet artifactroy') { 
            steps {
-            sh '/home/ubuntu/remoote_root/workspace/dotnet_dec/bin/Debug/net6.0/dotnetcoresample.dll'
-           }
+             sh '**/publish/*.dll'
+           }   
+        }    
     }
 }    
